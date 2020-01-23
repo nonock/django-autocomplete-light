@@ -74,7 +74,7 @@
             templateSelection: selected_template,
             ajax: ajax,
             tags: Boolean(element.attr('data-tags')),
-            dropdownParent: $(element.attr('data-dropdown-parent') || $(document.body)),
+            dropdownParent: element.attr('data-dropdown-parent') ? $(element.attr('data-dropdown-parent')) : $(document.body),
         });
 
         $(this).on('select2:selecting', function (e) {
