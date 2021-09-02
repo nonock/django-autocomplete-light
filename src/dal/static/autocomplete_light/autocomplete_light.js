@@ -27,8 +27,8 @@ yl.registerFunction = function (name, func) {
 };
 
 
-window.addEventListener("load", function () {
-
+window.addEventListener("load", loadDjangoAutocompleteLanguage);
+function loadDjangoAutocompleteLanguage () {
     // Check if `django.jQuery` exists otherwise set `django.jQuery` to non namespaced jQuery.
     window.django = window.django || {};
     if (!django.hasOwnProperty('jQuery') && jQuery !== 'undefined') {
@@ -461,4 +461,4 @@ window.addEventListener("load", function () {
         };
 
     })(django.jQuery, yl);
-});
+};
