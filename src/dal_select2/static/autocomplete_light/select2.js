@@ -88,7 +88,7 @@ document.addEventListener('dal-init-function', function () {
             ajax: ajax,
             with: null,
             tags: Boolean($element.attr('data-tags')),
-            dropdownParent: $element.attr('data-dropdown-parent') ? $(element.attr('data-dropdown-parent')) : $(document.body),
+            dropdownParent: $element.attr('data-dropdown-parent') ? $($element.attr('data-dropdown-parent')) : $(document.body),
         });
 
         $element.on('select2:selecting', function (e) {
